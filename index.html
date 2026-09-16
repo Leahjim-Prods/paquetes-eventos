@@ -1,300 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leahjim Prods | Paquetes de Eventos</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05080d">
+  <title>Leahjim Prods | Foto & Video Cinematográfico</title>
+  <meta name="description" content="Fotografía y video cinematográfico para eventos especiales. Conoce los paquetes de Leahjim Prods y cotiza tu fecha.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style_v2.css">
 </head>
 <body>
-
-  <div class="bg-glow bg-1"></div>
-  <div class="bg-glow bg-2"></div>
-  <div class="bg-grid"></div>
-
-  <header class="hero">
-    <div class="hero-content">
-      <img src="logo_transparent 2.0.png" alt="Leahjim Prods" class="logo" />
-      <p class="eyebrow">Producción audiovisual para eventos especiales</p>
-      <h1>Paquetes de eventos <span>cinematográficos</span></h1>
-      <p class="subtitle">
-        Cada paquete está pensado para mostrar con claridad todo lo que incluye,
-        desde una opción esencial hasta una experiencia premium completa.
-      </p>
-    </div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Leahjim Prods - Inicio">
+      <img src="logo_transparent 2.0.png" alt="Leahjim Prods">
+    </a>
+    <a class="nav-cta" href="#paquetes">Ver paquetes</a>
   </header>
 
-  <main class="container">
-
-    <section class="intro-card">
-      <div class="intro-left">
-        <h2>¿Quienes somos?</h2>
-        <p>
-          Producción audiovisual con sello cinematográfico
-          Nos especializamos en capturar eventos especiales con calidad de cine: cumpleaños, baby showers, 
-          aniversarios y celebraciones de todo tipo. Cada paquete está diseñado para adaptarse a tu ocasión, 
-          sin perder la esencia: momentos reales, contados de forma extraordinaria.
-        </p>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-noise"></div>
+      <div class="hero-content reveal">
+        <span class="kicker">Foto · Video · Historias reales</span>
+        <h1>Tu evento merece<br><em>sentirse otra vez.</em></h1>
+        <p>Fotografía y producción audiovisual con una mirada cinematográfica para convertir momentos reales en recuerdos que permanecen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#paquetes"><i class="ti ti-player-play"></i> Explorar paquetes</a>
+          <a class="btn btn-ghost" href="https://wa.me/51900844190?text=Hola%20Leahjim%20Prods,%20quisiera%20cotizar%20mi%20evento." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Cotizar</a>
+        </div>
       </div>
-      <div class="intro-right">
-        <div class="mini-stat">
-          <span class="mini-label">Estilo</span>
-          <strong>Cinematográfico</strong>
-        </div>
-        <div class="mini-stat">
-          <span class="mini-label">Cobertura</span>
-          <strong>Eventos especiales</strong>
-        </div>
-        <div class="mini-stat">
-          <span class="mini-label">Entrega</span>
-          <strong>Digital + redes</strong>
+      <a class="scroll-hint" href="#sobre-mi"><span></span> Descubre más</a>
+    </section>
+
+    <section class="about section" id="sobre-mi">
+      <div class="section-label">01 / SOBRE MÍ</div>
+      <div class="about-grid">
+        <figure class="portrait-wrap">
+          <img src="retrato-mijhael.jpg" alt="Mijhael, filmmaker y fotógrafo de Leahjim Prods" loading="lazy">
+          <figcaption>Filmmaker · Fotógrafo</figcaption>
+        </figure>
+        <div class="about-copy">
+          <span class="kicker">Detrás de la cámara</span>
+          <h2>Hola, soy <span>Mijhael.</span></h2>
+          <p class="lead">Soy el filmmaker y fotógrafo detrás de Leahjim Prods.</p>
+          <p>Mi enfoque no es solamente registrar lo que sucede. Busco los gestos, las miradas, el ambiente y esos pequeños momentos que hacen que cada evento tenga su propia historia.</p>
+          <blockquote>“Momentos reales, contados de forma extraordinaria.”</blockquote>
+          <div class="about-tags">
+            <span><i class="ti ti-movie"></i> Estilo cinematográfico</span>
+            <span><i class="ti ti-camera"></i> Foto + video</span>
+            <span><i class="ti ti-map-pin"></i> Arequipa</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="packages">
-
-      <article class="package-card basic">
-        <div class="package-head">
-          <div>
-            <p class="package-tag tag-basic">Paquete Básico</p>
-            <h3>Esencial</h3>
-          </div>
-          <div class="price">S/ 250 </div>
-        </div>
-
-        <p class="package-desc">
-          Una opción práctica para conservar los momentos más importantes del cumpleaños
-          con una edición limpia y bonita.
-        </p>
-
-        <div class="package-block">
-          <h4><i class="ti ti-video"></i> Video</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Video Trailer de 1 a 2 min</li>
-            <li><i class="ti ti-circle-check"></i> Montaje secuencial </li>
-            <li><i class="ti ti-circle-check"></i> Corrección de color básica</li>
-            <li><i class="ti ti-circle-check"></i> Música de fondo incluida</li>
-            <li><i class="ti ti-circle-check"></i> Sincronización de audio básica</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-camera"></i> Fotografía</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> 40 fotos editadas</li>
-            <li><i class="ti ti-circle-check"></i> Retoque básico de color </li>
-            <li><i class="ti ti-circle-check"></i> Selección de mejores momentos</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-package"></i> Entrega</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Galería digital por Drive o WeTransfer</li>
-            <li><i class="ti ti-circle-check"></i> Entrega en 3 a 4 días hábiles</li>
-            
-          </ul>
-        </div>
-
-        <div class="package-footer">
-          <span>Duración de cobertura: 2 horas</span>
-          <span>Movilidad aparte</span>
-        </div>
-      </article>
-
-      <article class="package-card medium featured">
-        <div class="badge">Más elegido</div>
-
-        <div class="package-head">
-          <div>
-            <p class="package-tag tag-medium">Paquete Medio</p>
-            <h3>Completo</h3>
-          </div>
-          <div class="price">S/ 390 </div>
-        </div>
-
-        <p class="package-desc">
-          La opción más equilibrada para quienes quieren un resultado más dinámico,
-          con una presentación mucho más atractiva y emocional.
-        </p>
-
-        <div class="package-block">
-          <h4><i class="ti ti-movie"></i> Video</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Trailer cinematográfico de 2 a 3 minutos</li>
-            <li><i class="ti ti-circle-check"></i> Video completo de 30 a 35 minutos</li>
-            <li><i class="ti ti-circle-check"></i> Música personalizada con IA</li>
-            <li><i class="ti ti-circle-check"></i> Corrección de color básica en todo el material</li>
-            <li><i class="ti ti-circle-check"></i> Montaje con ritmo y narrativa básica</li>
-            <li><i class="ti ti-circle-check"></i> Sincronización de música y ambiente</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-camera"></i> Fotografía</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> 60 fotos editadas</li>
-            <li><i class="ti ti-circle-check"></i> Retoque profesional de color</li>
-            <li><i class="ti ti-circle-check"></i> 5 fotos editadas con efecto cinemático </li>
-            <li><i class="ti ti-circle-check"></i> Selección de mejores momentos</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-package"></i> Entrega</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Galería digital por Drive o WeTransfer</li>
-            <li><i class="ti ti-circle-check"></i> Entrega en 3 a 4 días hábiles</li>
-            
-          </ul>
-        </div>
-
-        <div class="package-footer">
-          <span>Duración de cobertura: 2 a 3 horas</span>
-          <span>Movilidad aparte</span>
-        </div>
-      </article>
-
-      <article class="package-card high">
-        <div class="package-head">
-          <div>
-            <p class="package-tag tag-high">Paquete Alto</p>
-            <h3>Premium</h3>
-          </div>
-          <div class="price">S/ 550 </div>
-        </div>
-
-        <p class="package-desc">
-          Pensado para quienes quieren una propuesta más completa, con una estética más
-          elaborada, más contenido y un acabado más cinematográfico.
-        </p>
-
-        <div class="package-block">
-          <h4><i class="ti ti-movie"></i> Video</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Trailer cinematográfico de 3 a 4 minutos</li>
-            <li><i class="ti ti-circle-check"></i> Música personalizada con IA premium </li>
-            <li><i class="ti ti-circle-check"></i> Video completo de 60 minutos</li>
-            <li><i class="ti ti-circle-check"></i> Corrección de color avanzada</li>
-            <li><i class="ti ti-circle-check"></i> Video completo estilo documental cinemático</li>
-            <li><i class="ti ti-circle-check"></i> Montaje con transiciones y narrativa</li>
-            <li><i class="ti ti-circle-check"></i> Historia narrativa del evento</li>
-            <li><i class="ti ti-circle-check"></i> Sincronización de audio completa</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-camera"></i> Fotografía</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> 90 fotos editadas</li>
-            <li><i class="ti ti-circle-check"></i> Retoque avanzado</li>
-            <li><i class="ti ti-circle-check"></i> 10 fotos editadas con efecto cinemático </li>
-      
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-brand-instagram"></i> Redes</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> 3 reels listos para Instagram o TikTok</li>
-            <li><i class="ti ti-circle-check"></i> Formato vertical 9:16</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-package"></i> Entrega</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Galería digital por Drive o WeTransfer</li>
-            <li><i class="ti ti-circle-check"></i> Entrega en 5 a 6 días hábiles</li>
-           
-          </ul>
-        </div>
-
-        <div class="package-footer">
-          <span>Duración de cobertura: 3 a 4 horas</span>
-          <span>Movilidad aparte</span>
-        </div>
-      </article>
-
-      <article class="package-card vip">
-        <div class="package-head">
-          <div>
-            <p class="package-tag tag-vip">Paquete VIP</p>
-            <h3>Exclusivo</h3>
-          </div>
-          <div class="price">S/ 840 </div>
-        </div>
-
-        <p class="package-desc">
-          La propuesta más completa y elegante. Ideal para un cumpleaños que merece ser
-          recordado con una producción de alto nivel.
-        </p>
-
-        <div class="package-block">
-          <h4><i class="ti ti-movie"></i> Video</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Trailer cinematográfico de 4 a 5 minutos</li>
-            <li><i class="ti ti-circle-check"></i> Música personalizada con IA exclusiva</li>
-            <li><i class="ti ti-circle-check"></i> Video completo de 60 a mas minutos</li>
-            <li><i class="ti ti-circle-check"></i> Corrección de color VIP</li>
-            <li><i class="ti ti-circle-check"></i> Video completo estilo documental cinemático</li>
-            <li><i class="ti ti-circle-check"></i> Montaje premium con efectos visuales</li>
-            <li><i class="ti ti-circle-check"></i> Historia narrativa completa</li>
-            <li><i class="ti ti-circle-check"></i> Diseño de audio completo</li>
-            <li><i class="ti ti-circle-check"></i> Atención prioritaria durante el proceso</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-camera"></i> Fotografía</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> 130 fotos editadas</li>
-            <li><i class="ti ti-circle-check"></i> Retoque VIP avanzado</li>
-            <li><i class="ti ti-circle-check"></i> 20 fotos editadas con efecto cinemático </li>
-            <li><i class="ti ti-circle-check"></i> Archivos RAW incluidos</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-brand-instagram"></i> Redes</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> 5 reels listos para publicar</li>
-            <li><i class="ti ti-circle-check"></i> Contenido premium para redes sociales</li>
-          </ul>
-        </div>
-
-        <div class="package-block">
-          <h4><i class="ti ti-package"></i> Entrega</h4>
-          <ul>
-            <li><i class="ti ti-circle-check"></i> Galería digital por Drive o WeTransfer</li>
-            <li><i class="ti ti-circle-check"></i> Entrega prioritaria en 5 días hábiles</li>
-            
-          </ul>
-        </div>
-
-        <div class="package-footer">
-          <span>Duración de cobertura: 3 a 4 horas</span>
-          <span>Movilidad aparte</span>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="contact-strip">
-      <div>
-        <h2>¿Quieres una cotización personalizada?</h2>
-        <p>Podemos ajustar cualquiera de estos paquetes según la duración, el lugar y lo que necesites para tu evento.</p>
+    <section class="services section" id="servicios">
+      <div class="section-heading">
+        <div><div class="section-label">02 / SERVICIOS</div><h2>Una historia.<br><span>Tres formas de conservarla.</span></h2></div>
+        <p>Elige el tipo de cobertura que mejor se adapte a tu evento.</p>
       </div>
-      <a href="#" class="contact-btn">Escríbeme por WhatsApp:</a>
-      <a href="#" class="contact-btn">900844190</a>
+      <div class="service-grid">
+        <article class="service-card"><i class="ti ti-video"></i><span>01</span><h3>Video</h3><p>Una pieza audiovisual con ritmo, emoción, música y narrativa.</p></article>
+        <article class="service-card"><i class="ti ti-camera"></i><span>02</span><h3>Fotografía</h3><p>Momentos clave seleccionados y editados con una estética cuidada.</p></article>
+        <article class="service-card featured-service"><i class="ti ti-sparkles"></i><span>03</span><h3>Foto + Video</h3><p>La experiencia completa para conservar tu evento desde dos miradas.</p></article>
+      </div>
     </section>
 
+    <section class="events-band">
+      <p>CREAMOS RECUERDOS PARA</p>
+      <div class="event-list"><span>Bodas</span><b>·</b><span>15 años</span><b>·</b><span>Cumpleaños</span><b>·</b><span>Bautizos</span><b>·</b><span>Eventos sociales</span></div>
+    </section>
+
+    <section class="packages-section section" id="paquetes">
+      <div class="section-heading packages-title">
+        <div><div class="section-label">03 / PAQUETES</div><h2>Elige cómo quieres<br><span>recordarlo.</span></h2></div>
+        <p>En celular verás primero lo esencial. Toca “Ver todo” para revisar cada detalle.</p>
+      </div>
+
+      <div class="packages">
+        <article class="package-card">
+          <div class="package-top"><div><small>PAQUETE BÁSICO</small><h3>Esencial</h3></div><div class="price"><small>Desde</small>S/ 250</div></div>
+          <p class="package-summary">Una cobertura práctica para conservar los momentos más importantes.</p>
+          <div class="quick-info"><span><i class="ti ti-clock"></i> 2 horas</span><span><i class="ti ti-photo"></i> 30 fotos</span><span><i class="ti ti-video"></i> Video 8–10 min</span></div>
+          <details><summary>Ver todo lo que incluye <i class="ti ti-chevron-down"></i></summary><div class="details-body">
+            <h4>Video</h4><ul><li>Video completo de 8 a 10 minutos</li><li>Montaje secuencial cronológico</li><li>Corrección de color básica</li><li>Música de fondo incluida</li><li>Sincronización de audio básica</li></ul>
+            <h4>Fotografía</h4><ul><li>30 fotos editadas</li><li>Retoque básico de color y exposición</li><li>Selección de mejores momentos</li></ul>
+            <h4>Entrega</h4><ul><li>Galería digital por Drive o WeTransfer</li><li>Entrega en 5 a 6 días hábiles</li><li>1 revisión incluida</li></ul>
+          </div></details>
+          <a class="package-cta" href="https://wa.me/51900844190?text=Hola,%20me%20interesa%20el%20paquete%20Esencial%20de%20S/250." target="_blank" rel="noopener">Consultar este paquete <i class="ti ti-arrow-up-right"></i></a>
+          <p class="mobility">Movilidad aparte</p>
+        </article>
+
+        <article class="package-card package-featured">
+          <div class="popular">MÁS ELEGIDO</div>
+          <div class="package-top"><div><small>PAQUETE MEDIO</small><h3>Completo</h3></div><div class="price"><small>Desde</small>S/ 390</div></div>
+          <p class="package-summary">Una propuesta equilibrada, dinámica y emocional para contar mucho más.</p>
+          <div class="quick-info"><span><i class="ti ti-clock"></i> 2–3 horas</span><span><i class="ti ti-photo"></i> 50 fotos</span><span><i class="ti ti-movie"></i> Tráiler + video</span></div>
+          <details><summary>Ver todo lo que incluye <i class="ti ti-chevron-down"></i></summary><div class="details-body">
+            <h4>Video</h4><ul><li>Tráiler cinematográfico de 1 a 2 minutos</li><li>Video completo de 10 a 15 minutos</li><li>Música personalizada con IA</li><li>Corrección de color básica</li><li>Montaje con ritmo y narrativa básica</li><li>Sincronización de música y ambiente</li></ul>
+            <h4>Fotografía</h4><ul><li>50 fotos editadas</li><li>Retoque profesional</li><li>Selección curada de momentos clave</li></ul>
+            <h4>Entrega</h4><ul><li>Galería digital por Drive o WeTransfer</li><li>Entrega en 4 a 5 días hábiles</li><li>1 revisión incluida</li></ul>
+          </div></details>
+          <a class="package-cta" href="https://wa.me/51900844190?text=Hola,%20me%20interesa%20el%20paquete%20Completo%20de%20S/390." target="_blank" rel="noopener">Consultar este paquete <i class="ti ti-arrow-up-right"></i></a>
+          <p class="mobility">Movilidad aparte</p>
+        </article>
+
+        <article class="package-card">
+          <div class="package-top"><div><small>PAQUETE ALTO</small><h3>Premium</h3></div><div class="price"><small>Desde</small>S/ 550</div></div>
+          <p class="package-summary">Más contenido, una estética elaborada y un acabado más cinematográfico.</p>
+          <div class="quick-info"><span><i class="ti ti-clock"></i> 3–4 horas</span><span><i class="ti ti-photo"></i> 80 fotos</span><span><i class="ti ti-brand-instagram"></i> 3 reels</span></div>
+          <details><summary>Ver todo lo que incluye <i class="ti ti-chevron-down"></i></summary><div class="details-body">
+            <h4>Video</h4><ul><li>Tráiler cinematográfico de 2 a 3 minutos</li><li>Música personalizada con IA</li><li>Video completo de 15 a 20 minutos</li><li>Corrección de color avanzada</li><li>Montaje con transiciones y narrativa</li><li>Historia narrativa del evento</li><li>Sincronización de audio completa</li></ul>
+            <h4>Fotografía</h4><ul><li>80 fotos editadas</li><li>Retoque avanzado</li><li>10 fotos verticales para stories</li></ul>
+            <h4>Redes + entrega</h4><ul><li>3 reels en formato 9:16</li><li>Galería digital</li><li>Entrega en 4 a 5 días hábiles</li><li>2 revisiones incluidas</li></ul>
+          </div></details>
+          <a class="package-cta" href="https://wa.me/51900844190?text=Hola,%20me%20interesa%20el%20paquete%20Premium%20de%20S/550." target="_blank" rel="noopener">Consultar este paquete <i class="ti ti-arrow-up-right"></i></a>
+          <p class="mobility">Movilidad aparte</p>
+        </article>
+
+        <article class="package-card vip">
+          <div class="package-top"><div><small>PAQUETE VIP</small><h3>Exclusivo</h3></div><div class="price"><small>Desde</small>S/ 800</div></div>
+          <p class="package-summary">La experiencia más completa para una producción con atención prioritaria.</p>
+          <div class="quick-info"><span><i class="ti ti-clock"></i> 3–4 horas</span><span><i class="ti ti-photo"></i> 120 fotos</span><span><i class="ti ti-brand-instagram"></i> 5 reels</span></div>
+          <details><summary>Ver todo lo que incluye <i class="ti ti-chevron-down"></i></summary><div class="details-body">
+            <h4>Video</h4><ul><li>Tráiler cinematográfico de 3 a 4 minutos</li><li>Música personalizada con IA exclusiva</li><li>Video completo de 20 a 25 minutos</li><li>Corrección de color VIP</li><li>Montaje premium con efectos visuales</li><li>Historia narrativa completa</li><li>Diseño de audio completo</li><li>Atención prioritaria durante el proceso</li></ul>
+            <h4>Fotografía</h4><ul><li>120 fotos editadas</li><li>Retoque VIP avanzado</li><li>15 fotos para stories</li><li>Archivos RAW incluidos</li></ul>
+            <h4>Redes + entrega</h4><ul><li>5 reels listos para publicar</li><li>Contenido premium para redes</li><li>Galería digital</li><li>Entrega prioritaria en 3 días hábiles</li><li>3 revisiones incluidas</li></ul>
+          </div></details>
+          <a class="package-cta" href="https://wa.me/51900844190?text=Hola,%20me%20interesa%20el%20paquete%20Exclusivo%20de%20S/800." target="_blank" rel="noopener">Consultar este paquete <i class="ti ti-arrow-up-right"></i></a>
+          <p class="mobility">Movilidad aparte</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="section-label">04 / EL PROCESO</div>
+      <h2>Simple para ti.<br><span>Cuidado en cada detalle.</span></h2>
+      <div class="steps"><div><b>01</b><h3>Cuéntame</h3><p>Fecha, lugar y tipo de evento.</p></div><div><b>02</b><h3>Reserva</h3><p>Separa tu fecha con anticipación.</p></div><div><b>03</b><h3>Vivimos el evento</h3><p>Tú disfrutas. Nosotros capturamos.</p></div><div><b>04</b><h3>Revívelo</h3><p>Recibe tu historia editada.</p></div></div>
+    </section>
+
+    <section class="final-cta section" id="contacto">
+      <span class="kicker">¿YA TIENES FECHA?</span>
+      <h2>Hagamos algo que<br><em>valga la pena recordar.</em></h2>
+      <p>Cuéntame sobre tu evento y te ayudo a encontrar la cobertura que mejor se adapte a lo que necesitas.</p>
+      <a class="btn btn-primary btn-large" href="https://wa.me/51900844190?text=Hola%20Leahjim%20Prods,%20quisiera%20cotizar%20mi%20evento." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> Escribir por WhatsApp</a>
+      <span class="phone">+51 900 844 190</span>
+    </section>
   </main>
 
+  <footer><img src="logo_transparent 2.0.png" alt="Leahjim Prods"><p>Historias reales. Recuerdos cinematográficos.</p><small>© 2026 Leahjim Prods</small></footer>
+
+  <nav class="mobile-bar" aria-label="Acciones rápidas">
+    <a href="#paquetes"><i class="ti ti-packages"></i><span>Paquetes</span></a>
+    <a class="whatsapp" href="https://wa.me/51900844190?text=Hola%20Leahjim%20Prods,%20quisiera%20cotizar%20mi%20evento." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i><span>Cotizar</span></a>
+  </nav>
 </body>
 </html>
