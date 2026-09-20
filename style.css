@@ -1118,7 +1118,7 @@ details[open] summary i {
    # 18. BOTÓN "CONSULTAR ESTE PAQUETE"
    ================================================== */
 
-.package-cta {
+.package-btn {
     width: 100%;
     margin-top: 20px;
     padding: 15px 18px;
@@ -1126,25 +1126,25 @@ details[open] summary i {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 10px;
 
     border: 1px solid rgba(77, 163, 255, .45);
     border-radius: 12px;
 
-    color: #f7fbff;
+    color: #ffffff;
     font-size: .84rem;
     font-weight: 800;
     text-decoration: none;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(77, 163, 255, .22),
-            rgba(77, 163, 255, .08)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(77, 163, 255, .25),
+        rgba(77, 163, 255, .10)
+    );
 
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, .18);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+
+    cursor: pointer;
 
     transition:
         transform .25s ease,
@@ -1153,36 +1153,49 @@ details[open] summary i {
         box-shadow .25s ease;
 }
 
-.package-cta i {
+
+/* # Icono de WhatsApp */
+
+.package-btn i {
     color: #55a9ff;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
 
     transition: transform .25s ease;
 }
 
-.package-cta:hover {
+
+/* # Efecto al pasar el mouse */
+
+.package-btn:hover {
     transform: translateY(-2px);
 
     border-color: #55a9ff;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(77, 163, 255, .32),
-            rgba(77, 163, 255, .14)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(77, 163, 255, .38),
+        rgba(77, 163, 255, .17)
+    );
 
-    box-shadow:
-        0 12px 30px rgba(77, 163, 255, .12);
+    box-shadow: 0 12px 30px rgba(77, 163, 255, .15);
 }
 
-.package-cta:hover i {
-    transform: translateX(3px);
+
+/* # Movimiento del icono */
+
+.package-btn:hover i {
+    transform: scale(1.12);
 }
 
-.package-cta:active {
+
+/* # Efecto al presionar */
+
+.package-btn:active {
     transform: scale(.98);
 }
+
+
+/* # Texto "Movilidad aparte" */
 
 .mobility {
     display: block;
@@ -1194,7 +1207,6 @@ details[open] summary i {
     letter-spacing: .1em;
     text-transform: uppercase;
 }
-
 
 /* ==================================================
    # 19. PROCESO DE TRABAJO
