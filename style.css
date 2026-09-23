@@ -1195,17 +1195,38 @@ details[open] summary i {
 }
 
 
-/* # Texto "Movilidad aparte" */
+/* # Aviso de movilidad */
 
-.mobility {
+.movilidad-aviso {
+    margin-top: 14px;
+    padding: 12px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(77, 163, 255, 0.08);
+    border: 1px solid rgba(77, 163, 255, 0.28);
+    border-radius: 9px;
+}
+
+.movilidad-icono {
+    font-size: 1.15rem;
+}
+
+.movilidad-aviso strong {
     display: block;
 
-    margin-top: 12px;
+    color: #ffffff;
+    font-size: .82rem;
+    font-weight: 700;
+}
 
-    color: #596574;
-    font-size: .67rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+.movilidad-aviso p {
+    margin: 3px 0 0;
+
+    color: #8fbce9;
+    font-size: .75rem;
 }
 
 /* ==================================================
@@ -1787,3 +1808,4 @@ footer small {
         margin: 20px 0 6px;
     }
 }
+
