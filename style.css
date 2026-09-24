@@ -1229,6 +1229,70 @@ details[open] summary i {
     font-size: .75rem;
 }
 
+
+/* ==================================================
+   # AGREGADOS / PERSONALIZA TU PAQUETE
+   ================================================== */
+
+.addons {
+    border-top: 1px solid rgba(255, 255, 255, .07);
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.addon-card {
+    min-height: 220px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(77, 163, 255, .08), #0a0f16 48%);
+}
+
+.addon-card > i {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(77, 163, 255, .25);
+    border-radius: 14px;
+    color: #55a9ff;
+    background: rgba(77, 163, 255, .08);
+    font-size: 1.45rem;
+}
+
+.addon-card small { color: #6f7b8b; font-size: .62rem; font-weight: 800; letter-spacing: .14em; }
+.addon-card h3 { margin: 6px 0 8px; font-size: 1.35rem; }
+.addon-card p { padding-right: 110px; color: #8e9aa9; font-size: .82rem; line-height: 1.65; }
+.addon-card strong { position: absolute; right: 26px; bottom: 26px; color: #55a9ff; font-size: 1rem; }
+
+.addons-note {
+    margin-top: 16px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid rgba(77, 163, 255, .2);
+    border-radius: 14px;
+    background: rgba(77, 163, 255, .055);
+}
+.addons-note i { color: #55a9ff; font-size: 1.15rem; margin-top: 2px; }
+.addons-note p { color: #91a0b1; font-size: .78rem; line-height: 1.6; }
+
+@media (max-width: 820px) {
+    .addons-grid { grid-template-columns: 1fr; }
+    .addon-card { min-height: 200px; padding: 22px 20px; }
+    .addon-card p { padding-right: 0; padding-bottom: 38px; }
+    .addon-card strong { right: 20px; bottom: 20px; }
+}
+
 /* ==================================================
    # 19. PROCESO DE TRABAJO
    ================================================== */
@@ -1808,4 +1872,3 @@ footer small {
         margin: 20px 0 6px;
     }
 }
-
