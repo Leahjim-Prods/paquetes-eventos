@@ -267,7 +267,36 @@
         <p>Puedes sumar estos adicionales a cualquiera de nuestros paquetes según lo que necesites para tu evento.</p>
       </div>
 
-      <div class="addons-grid selectable-addons">
+      <div class="package-builder">
+  <div class="package-builder-head">
+    <small>01 / ELIGE TU PAQUETE</small>
+    <h3>Selecciona una cobertura</h3>
+  </div>
+  <div class="package-choice-grid">
+    <label class="package-choice">
+      <input type="radio" name="custom-package" value="Esencial" data-price="190" checked>
+      <span><b>Esencial</b><strong>S/190</strong></span>
+    </label>
+    <label class="package-choice">
+      <input type="radio" name="custom-package" value="Completo" data-price="250">
+      <span><b>Completo</b><strong>S/250</strong></span>
+    </label>
+    <label class="package-choice">
+      <input type="radio" name="custom-package" value="Premium" data-price="390">
+      <span><b>Premium</b><strong>S/390</strong></span>
+    </label>
+    <label class="package-choice">
+      <input type="radio" name="custom-package" value="VIP" data-price="550">
+      <span><b>VIP</b><strong>S/550</strong></span>
+    </label>
+  </div>
+  <div class="package-builder-head extras-title">
+    <small>02 / AGREGA EXTRAS</small>
+    <h3>Personaliza tu cobertura</h3>
+  </div>
+</div>
+
+<div class="addons-grid selectable-addons">
         <label class="addon-card selectable-addon" for="addon-dron">
           <input id="addon-dron" class="addon-checkbox" type="checkbox" data-title="Dron" data-price="150">
           <i class="ti ti-drone"></i><div><small>AGREGADO</small><h3>Dron</h3><p>Tomas aéreas para darle una mirada diferente y más cinematográfica a tu evento.</p></div><strong>Desde S/150</strong>
@@ -322,85 +351,88 @@
   </nav>
 
   <script>
-  (function () {
-    const PHONE = "51900844190";
-    const packageButtons = Array.from(document.querySelectorAll(".package-select"));
-    const extras = Array.from(document.querySelectorAll(".addon-checkbox"));
-    const packageText = document.getElementById("addonsPackage");
-    const extrasBox = document.getElementById("addonsSelected");
-    const totalText = document.getElementById("addonsTotal");
-    const whatsappBtn = document.getElementById("addonsWhatsapp");
-    let selectedPackage = null;
+(function () {
+  const PHONE = "51900844190";
+  const packages = Array.from(document.querySelectorAll('input[name="custom-package"]'));
+  const extras = Array.from(document.querySelectorAll('.addon-checkbox'));
+  const packageText = document.getElementById('addonsPackage');
+  const extrasBox = document.getElementById('addonsSelected');
+  const totalText = document.getElementById('addonsTotal');
+  const whatsappBtn = document.getElementById('addonsWhatsapp');
 
-    function getExtras() {
-      return extras.filter(el => el.checked).map(el => ({
-        name: el.dataset.title,
-        price: Number(el.dataset.price || 0)
-      }));
+  function selectedPackage() {
+    const el = packages.find(x => x.checked) || packages[0];
+    return {
+      name: el ? el.value : "Esencial",
+      price: el ? Number(el.dataset.price || 0) : 190
+    };
+  }
+
+  function selectedExtras() {
+    return extras.filter(x => x.checked).map(x => ({
+      name: x.dataset.title || "Agregado",
+      price: Number(x.dataset.price || 0)
+    }));
+  }
+
+  function updateBuilder() {
+    const pkg = selectedPackage();
+    const chosen = selectedExtras();
+    const extrasTotal = chosen.reduce((sum, item) => sum + item.price, 0);
+    const total = pkg.price + extrasTotal;
+
+    packageText.textContent = "Paquete " + pkg.name + " — S/" + pkg.price;
+
+    if (!chosen.length) {
+      extrasBox.innerHTML = '<div class="no-addons">Sin agregados seleccionados.</div>';
+    } else {
+      extrasBox.innerHTML =
+        chosen.map(item =>
+          '<div class="addon-summary-row"><b>+ ' + item.name + '</b><span>S/' + item.price + '</span></div>'
+        ).join('') +
+        '<div class="addon-summary-row addons-subtotal"><b>Total de agregados</b><span>S/' + extrasTotal + '</span></div>';
     }
 
-    function update() {
-      const selected = getExtras();
-      const extrasTotal = selected.reduce((sum, item) => sum + item.price, 0);
+    totalText.textContent = "S/" + total;
 
-      extrasBox.innerHTML = selected.length
-        ? selected.map(item =>
-            '<div class="addon-summary-row"><b>+ ' + item.name + '</b><span>S/' + item.price + '</span></div>'
-          ).join('') +
-          '<div class="addon-summary-row addons-subtotal"><b>Subtotal de agregados</b><span>S/' + extrasTotal + '</span></div>'
-        : '<div class="no-addons">Sin agregados seleccionados.</div>';
-
-      if (!selectedPackage) {
-        packageText.textContent = "Primero elige un paquete";
-        totalText.textContent = selected.length ? "Extras: S/" + extrasTotal : "—";
-        whatsappBtn.href = "#paquetes";
-        whatsappBtn.removeAttribute("target");
-        whatsappBtn.classList.add("disabled");
-        whatsappBtn.innerHTML = '<i class="ti ti-brand-whatsapp"></i> Elegir un paquete';
-        return;
-      }
-
-      const grandTotal = selectedPackage.price + extrasTotal;
-      packageText.textContent = "Paquete " + selectedPackage.name + " — S/" + selectedPackage.price;
-      totalText.textContent = "S/" + grandTotal;
-
-      let msg = "Hola, vi la página de eventos de Leahjim Prods y quiero solicitar esta cobertura:\n\n";
-      msg += "📦 Paquete seleccionado: " + selectedPackage.name + " — S/" + selectedPackage.price + "\n\n";
-      msg += "➕ Agregados seleccionados:\n";
-      if (selected.length) {
-        selected.forEach(item => msg += "• " + item.name + " — S/" + item.price + "\n");
-      } else {
-        msg += "• Ninguno\n";
-      }
-      msg += "\nSubtotal de agregados: S/" + extrasTotal;
-      msg += "\n💰 TOTAL: S/" + grandTotal;
-      msg += "\n\n🚗 Movilidad aparte.";
-      msg += "\n\nQuisiera consultar disponibilidad para la fecha de mi evento.";
-
-      whatsappBtn.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
-      whatsappBtn.target = "_blank";
-      whatsappBtn.rel = "noopener";
-      whatsappBtn.classList.remove("disabled");
-      whatsappBtn.innerHTML = '<i class="ti ti-brand-whatsapp"></i> Solicitar por WhatsApp';
+    let msg = "Hola, vi la página de eventos de Leahjim Prods y quiero solicitar esta cobertura:\n\n";
+    msg += "📦 Paquete seleccionado: " + pkg.name + " — S/" + pkg.price + "\n\n";
+    msg += "➕ Agregados seleccionados:\n";
+    if (chosen.length) {
+      chosen.forEach(item => msg += "• " + item.name + " — S/" + item.price + "\n");
+    } else {
+      msg += "• Ninguno\n";
     }
+    msg += "\nSubtotal de agregados: S/" + extrasTotal;
+    msg += "\n💰 TOTAL PAQUETE + AGREGADOS: S/" + total;
+    msg += "\n\n🚗 Movilidad aparte.";
+    msg += "\n\nQuisiera consultar disponibilidad para la fecha de mi evento.";
 
-    packageButtons.forEach(btn => {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        selectedPackage = { name: this.dataset.package, price: Number(this.dataset.price) };
-        packageButtons.forEach(x => x.classList.remove("selected-package"));
-        this.classList.add("selected-package");
-        update();
-        document.getElementById("agregados").scrollIntoView({behavior:"smooth", block:"start"});
-      });
+    whatsappBtn.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+    whatsappBtn.target = "_blank";
+    whatsappBtn.rel = "noopener";
+    whatsappBtn.classList.remove("disabled");
+    whatsappBtn.innerHTML = '<i class="ti ti-brand-whatsapp"></i> Solicitar por WhatsApp';
+  }
+
+  packages.forEach(x => x.addEventListener('change', updateBuilder));
+  extras.forEach(x => x.addEventListener('change', updateBuilder));
+
+  // Existing package CTA buttons also select the corresponding package and go to builder.
+  document.querySelectorAll('.package-select').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const name = this.dataset.package;
+      const radio = packages.find(x => x.value === name);
+      if (radio) radio.checked = true;
+      updateBuilder();
+      document.getElementById('agregados').scrollIntoView({behavior:'smooth', block:'start'});
     });
+  });
 
-    extras.forEach(el => el.addEventListener("change", update));
-    const grid = document.querySelector(".selectable-addons");
-    if (grid) grid.addEventListener("click", () => setTimeout(update, 0));
-    update();
-  })();
-  </script>
+  updateBuilder();
+})();
+</script>
 
 </body>
 </html>
