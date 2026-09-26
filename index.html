@@ -191,12 +191,7 @@
             <h4>Fotografía</h4><ul><li>48 fotos editadas profesionales</li><li>2 fotos editadas con look cinemático</li><li>Retoque de color y exposición</li></ul>
             <h4>Entrega</h4><ul><li>Galería digital por Drive</li><li>Galería privada</li><li>Entrega en 4 a 5 días hábiles</li></ul>
           </div></details>
-          <a class="package-btn"
-   href="https://wa.me/51900844190?text=Hola,%20estoy%20interesado%20en%20el%20paquete%20de%20S/190."
-   target="_blank">
-    <i class="ti ti-brand-whatsapp"></i>
-    Consultar paquete Esencial
-</a>
+          <a class="package-btn package-select" href="#agregados" data-package="Esencial" data-price="190"><i class="ti ti-brand-whatsapp"></i> Consultar paquete Esencial</a>
           <div class="movilidad-aviso">
     <span class="movilidad-icono">-</span>
 
@@ -216,12 +211,7 @@
             <h4>Fotografía</h4><ul><li>85 fotos editadas profesionales</li><li>5 fotos editadas con look cinemático</li><li>5 fotos impresas 10 x 15cm</li><li>Retoque de color y exposición</li></ul>
             <h4>Entrega</h4><ul><li>Galería digital por Drive</li><li>Galería privada</li><li>Entrega en 4 a 5 días hábiles</li></ul>
           </div></details>
-          <a class="package-btn"
-   href="https://wa.me/51900844190?text=Hola,%20estoy%20interesado%20en%20el%20paquete%20de%20S/250."
-   target="_blank">
-    <i class="ti ti-brand-whatsapp"></i>
-    Consultar paquete Completo
-</a>
+          <a class="package-btn package-select" href="#agregados" data-package="Completo" data-price="250"><i class="ti ti-brand-whatsapp"></i> Consultar paquete Completo</a>
           <div class="movilidad-aviso">
     <span class="movilidad-icono">-</span>
 
@@ -240,12 +230,7 @@
             <h4>Fotografía</h4><ul><li>140 fotos editadas profesionales</li><li>10 fotos editadas con look cinemático</li><li>10 fotos impresas 10 x 15cm</li><li>Retoque de color y exposición</li><li>Retoque profecional</li></ul>
             <h4>Entrega</h4><ul><li>Galería digital por Drive</li><li>Galería privada</li><li>Entrega en 5 a 6 días hábiles</li></ul>
           </div></details>
-          <a class="package-btn"
-   href="https://wa.me/51900844190?text=Hola,%20estoy%20interesado%20en%20el%20paquete%20de%20S/390."
-   target="_blank">
-    <i class="ti ti-brand-whatsapp"></i>
-    Consultar paquete Premium
-</a>
+          <a class="package-btn package-select" href="#agregados" data-package="Premium" data-price="390"><i class="ti ti-brand-whatsapp"></i> Consultar paquete Premium</a>
           <div class="movilidad-aviso">
     <span class="movilidad-icono">-</span>
 
@@ -264,12 +249,7 @@
             <h4>Fotografía</h4><ul><li>200 fotos editadas</li><li>20 fotos editadas con look cinemático</li><li>15 fotos impresas 10 x 15cm</li><li>Retoque de color y exposición</li><li>Retoque VIP avanzado</li></ul>
             <h4>Entrega</h4><ul><li>Galería digital por Drive</li><li>Galería privada</li><li>Entrega prioritaria en 4 días hábileses</li></ul>
           </div></details>
-          <a class="package-btn"
-   href="https://wa.me/51900844190?text=Hola,%20estoy%20interesado%20en%20el%20paquete%20de%20S/550."
-   target="_blank">
-    <i class="ti ti-brand-whatsapp"></i>
-    Consultar paquete VIP
-</a>
+          <a class="package-btn package-select" href="#agregados" data-package="VIP" data-price="550"><i class="ti ti-brand-whatsapp"></i> Consultar paquete VIP</a>
           <div class="movilidad-aviso">
     <span class="movilidad-icono">-</span>
 
@@ -287,18 +267,45 @@
         <p>Puedes sumar estos adicionales a cualquiera de nuestros paquetes según lo que necesites para tu evento.</p>
       </div>
 
-      <div class="addons-grid">
-        <article class="addon-card"><i class="ti ti-drone"></i><div><small>AGREGADO</small><h3>Dron</h3><p>Tomas aéreas para darle una mirada diferente y más cinematográfica a tu evento.</p></div><strong>Desde S/150</strong></article>
-        <article class="addon-card"><i class="ti ti-book-2"></i><div><small>AGREGADO</small><h3>Photobook profesional</h3><p>Una selección de tus mejores fotografías presentada en un recuerdo físico especial.</p></div><strong>Desde S/180</strong></article>
-        <article class="addon-card"><i class="ti ti-camera-heart"></i><div><small>AGREGADO</small><h3>Sesión previa</h3><p>Sesión fotográfica adicional antes del evento para crear recuerdos con más calma y detalle.</p></div><strong>Desde S/150</strong></article>
-        <article class="addon-card"><i class="ti ti-usb"></i><div><small>AGREGADO</small><h3>USB personalizado</h3><p>Entrega física adicional con fotografías y videos finales.</p></div><strong>Desde S/50</strong></article>
-        <article class="addon-card"><i class="ti ti-clock-plus"></i><div><small>AGREGADO</small><h3>Hora adicional</h3><p>Extiende la cobertura cuando la celebración necesita un poco más de tiempo.</p></div><strong>S/70 / h</strong></article>
+      <div class="addons-grid selectable-addons">
+        <label class="addon-card selectable-addon" for="addon-dron">
+          <input id="addon-dron" class="addon-checkbox" type="checkbox" data-title="Dron" data-price="150">
+          <i class="ti ti-drone"></i><div><small>AGREGADO</small><h3>Dron</h3><p>Tomas aéreas para darle una mirada diferente y más cinematográfica a tu evento.</p></div><strong>Desde S/150</strong>
+        </label>
+        <label class="addon-card selectable-addon" for="addon-photobook">
+          <input id="addon-photobook" class="addon-checkbox" type="checkbox" data-title="Photobook profesional" data-price="180">
+          <i class="ti ti-book-2"></i><div><small>AGREGADO</small><h3>Photobook profesional</h3><p>Una selección de tus mejores fotografías presentada en un recuerdo físico especial.</p></div><strong>Desde S/180</strong>
+        </label>
+        <label class="addon-card selectable-addon" for="addon-sesion">
+          <input id="addon-sesion" class="addon-checkbox" type="checkbox" data-title="Sesión previa" data-price="150">
+          <i class="ti ti-camera-heart"></i><div><small>AGREGADO</small><h3>Sesión previa</h3><p>Sesión fotográfica adicional antes del evento para crear recuerdos con más calma y detalle.</p></div><strong>Desde S/150</strong>
+        </label>
+        <label class="addon-card selectable-addon" for="addon-usb">
+          <input id="addon-usb" class="addon-checkbox" type="checkbox" data-title="USB personalizado" data-price="50">
+          <i class="ti ti-usb"></i><div><small>AGREGADO</small><h3>USB personalizado</h3><p>Entrega física adicional con fotografías y videos finales.</p></div><strong>Desde S/50</strong>
+        </label>
+        <label class="addon-card selectable-addon" for="addon-hora">
+          <input id="addon-hora" class="addon-checkbox" type="checkbox" data-title="Hora adicional" data-price="70">
+          <i class="ti ti-clock-plus"></i><div><small>AGREGADO</small><h3>Hora adicional</h3><p>Extiende la cobertura cuando la celebración necesita un poco más de tiempo.</p></div><strong>S/70 / h</strong>
+        </label>
+      </div>
+
+      <div class="addons-summary">
+        <div class="addons-selection-info">
+          <small>TU SELECCIÓN</small>
+          <h3 id="addonsPackage">Primero elige un paquete</h3>
+          <div id="addonsSelected" class="addons-selected">Sin agregados seleccionados.</div>
+          <p class="addons-total">Total estimado: <strong id="addonsTotal">—</strong></p>
+        </div>
+        <a id="addonsWhatsapp" class="package-btn addons-whatsapp disabled" href="#paquetes">
+          <i class="ti ti-brand-whatsapp"></i> Elegir un paquete
+        </a>
       </div>
 
       <div class="addons-note"><i class="ti ti-info-circle"></i><p>Los agregados se suman al precio del paquete elegido. La disponibilidad de algunos servicios puede variar según la fecha, ubicación y características del evento.</p></div>
     </section>
 
-<section class="final-cta section" id="contacto">
+    <section class="final-cta section" id="contacto">
       <span class="kicker">¿YA TIENES FECHA?</span>
       <h2>Hagamos algo que<br><em>valga la pena recordar.</em></h2>
       <p>Cuéntame sobre tu evento y te ayudo a encontrar la cobertura que mejor se adapte a lo que necesitas.</p>
@@ -313,5 +320,87 @@
     <a href="#paquetes"><i class="ti ti-packages"></i><span>Paquetes</span></a>
     <a class="whatsapp" href="https://wa.me/51900844190?text=Hola%20Leahjim%20Prods,%20quisiera%20cotizar%20mi%20evento." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i><span>Cotizar</span></a>
   </nav>
+
+  <script>
+  (function () {
+    const PHONE = "51900844190";
+    const packageButtons = Array.from(document.querySelectorAll(".package-select"));
+    const extras = Array.from(document.querySelectorAll(".addon-checkbox"));
+    const packageText = document.getElementById("addonsPackage");
+    const extrasBox = document.getElementById("addonsSelected");
+    const totalText = document.getElementById("addonsTotal");
+    const whatsappBtn = document.getElementById("addonsWhatsapp");
+    let selectedPackage = null;
+
+    function getExtras() {
+      return extras.filter(el => el.checked).map(el => ({
+        name: el.dataset.title,
+        price: Number(el.dataset.price || 0)
+      }));
+    }
+
+    function update() {
+      const selected = getExtras();
+      const extrasTotal = selected.reduce((sum, item) => sum + item.price, 0);
+
+      extrasBox.innerHTML = selected.length
+        ? selected.map(item =>
+            '<div class="addon-summary-row"><b>+ ' + item.name + '</b><span>S/' + item.price + '</span></div>'
+          ).join('') +
+          '<div class="addon-summary-row addons-subtotal"><b>Subtotal de agregados</b><span>S/' + extrasTotal + '</span></div>'
+        : '<div class="no-addons">Sin agregados seleccionados.</div>';
+
+      if (!selectedPackage) {
+        packageText.textContent = "Primero elige un paquete";
+        totalText.textContent = selected.length ? "Extras: S/" + extrasTotal : "—";
+        whatsappBtn.href = "#paquetes";
+        whatsappBtn.removeAttribute("target");
+        whatsappBtn.classList.add("disabled");
+        whatsappBtn.innerHTML = '<i class="ti ti-brand-whatsapp"></i> Elegir un paquete';
+        return;
+      }
+
+      const grandTotal = selectedPackage.price + extrasTotal;
+      packageText.textContent = "Paquete " + selectedPackage.name + " — S/" + selectedPackage.price;
+      totalText.textContent = "S/" + grandTotal;
+
+      let msg = "Hola, vi la página de eventos de Leahjim Prods y quiero solicitar esta cobertura:\n\n";
+      msg += "📦 Paquete seleccionado: " + selectedPackage.name + " — S/" + selectedPackage.price + "\n\n";
+      msg += "➕ Agregados seleccionados:\n";
+      if (selected.length) {
+        selected.forEach(item => msg += "• " + item.name + " — S/" + item.price + "\n");
+      } else {
+        msg += "• Ninguno\n";
+      }
+      msg += "\nSubtotal de agregados: S/" + extrasTotal;
+      msg += "\n💰 TOTAL: S/" + grandTotal;
+      msg += "\n\n🚗 Movilidad aparte.";
+      msg += "\n\nQuisiera consultar disponibilidad para la fecha de mi evento.";
+
+      whatsappBtn.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+      whatsappBtn.target = "_blank";
+      whatsappBtn.rel = "noopener";
+      whatsappBtn.classList.remove("disabled");
+      whatsappBtn.innerHTML = '<i class="ti ti-brand-whatsapp"></i> Solicitar por WhatsApp';
+    }
+
+    packageButtons.forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        selectedPackage = { name: this.dataset.package, price: Number(this.dataset.price) };
+        packageButtons.forEach(x => x.classList.remove("selected-package"));
+        this.classList.add("selected-package");
+        update();
+        document.getElementById("agregados").scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+
+    extras.forEach(el => el.addEventListener("change", update));
+    const grid = document.querySelector(".selectable-addons");
+    if (grid) grid.addEventListener("click", () => setTimeout(update, 0));
+    update();
+  })();
+  </script>
+
 </body>
 </html>
