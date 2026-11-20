@@ -2093,3 +2093,23 @@ footer small {
   .addons-grid.selectable-addons .addon-card.selectable-addon p{font-size:.69rem !important}
   .addons-grid.selectable-addons .addon-card.selectable-addon > strong{font-size:.78rem !important}
 }
+
+
+.package-premium {
+    position: relative;
+}
+
+.complete-badge {
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    background: linear-gradient(135deg, #d6a84b, #f5d98b);
+    color: #17120a;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(214, 168, 75, 0.3);
+}
