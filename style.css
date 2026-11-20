@@ -2095,21 +2095,24 @@ footer small {
 }
 
 
+/* PAQUETE PREMIUM */
 .package-premium {
     position: relative;
+    border: 1px solid #d6a84b !important;
 }
 
-.complete-badge {
+/* ETIQUETA DORADA */
+.package-premium .complete-badge {
     position: absolute;
-    top: -13px;
-    right: 20px;
+    top: 0;
+    right: 0;
     background: linear-gradient(135deg, #d6a84b, #f5d98b);
     color: #17120a;
-    padding: 7px 18px;
-    border-radius: 20px;
+    padding: 6px 15px;
+    border-radius: 0 0 0 8px;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1px;
     z-index: 10;
-    box-shadow: 0 4px 15px rgba(214, 168, 75, 0.3);
+    box-shadow: 0 3px 12px rgba(214, 168, 75, 0.2);
 }
